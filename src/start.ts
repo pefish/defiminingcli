@@ -92,6 +92,7 @@ Starter.startAsync(async () => {
   await wallet.initRemoteClient(node)
   if (!actionMap[action]) {
     global.logger.error("action指定错误")
+    return
   }
   await actionMap[action](actionArgs)
 })
